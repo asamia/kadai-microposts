@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Users; //追加
+use App\User; //追加
 
 class UsersController extends Controller
 {
@@ -22,7 +22,7 @@ class UsersController extends Controller
     public function show($id)
     {
         //idの値でユーザを検索して取得
-        $user = User::find0rFail($id);
+        $user = User::findOrFail($id);
         
         // 関係するモデルの件数をロード
         $user->loadRelationshipCounts();
