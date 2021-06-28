@@ -7,7 +7,7 @@
     @else
         {{-- フォローボタンのフォーム --}}
         {!! Form::open(['route' => ['user.follow', $user->id]]) !!}
-            {!! Form::submit('Follow', ['class' => "btn brn-primary btn block"]) !!}
+            {!! Form::submit('Follow', ['class' => "btn btn-primary btn block"]) !!}
         {!! Form::close() !!}
     @endif
 @endif    
